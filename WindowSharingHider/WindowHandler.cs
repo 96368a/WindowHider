@@ -14,7 +14,7 @@ namespace WindowSharingHider
         [DllImport("user32")] static extern IntPtr GetWindowText(IntPtr hWnd, StringBuilder lpString, Int32 nMaxCount);
         [DllImport("user32")] static extern Int32 GetWindowTextLength(IntPtr hWnd);
         [DllImport("user32")] static extern Boolean GetWindowDisplayAffinity(IntPtr hWnd, out Int32 dwAffinity);
-        [DllImport("user32")] static extern UInt32 GetWindowThreadProcessId(IntPtr hWnd, out Int32 processId);
+        [DllImport("user32")] public static extern UInt32 GetWindowThreadProcessId(IntPtr hWnd, out Int32 processId);
         delegate bool EnumWindowsProc(IntPtr hWnd, IntPtr lParam);
 
         [DllImport("kernel32")] static extern IntPtr OpenProcess(Int32 dwDesiredAccess, Boolean bInheritHandle, Int32 dwProcessId);
